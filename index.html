@@ -1,0 +1,1211 @@
+<!DOCTYPE html><html lang='pt-br'><head><meta charset='UTF-8'><title>Relatório de Testes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f7f9; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; margin-top: 40px; }
+        .summary { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; padding: 20px; background: #ecf0f1; border-radius: 8px; }
+        .summary-item { flex-grow: 1; }
+        .summary-item h3 { margin: 0 0 10px 0; font-weight: 400; color: #7f8c8d; }
+        .summary-item .value { font-size: 2.5em; font-weight: 700; }
+        .summary-item .value.success { color: #27ae60; }
+        .summary-item .value.failure { color: #c0392b; }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px; }
+        .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .card-header { padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .card-header.success { background-color: #e8f5e9; border-left: 5px solid #27ae60; }
+        .card-header.failure { background-color: #fbe9e7; border-left: 5px solid #c0392b; }
+        .card-title { font-weight: 700; font-size: 1.1em; margin: 0; }
+        .status-icon { font-size: 1.5em; }
+        .status-icon.success { color: #27ae60; }
+        .status-icon.failure { color: #c0392b; }
+        .card-body { padding: 15px; font-size: 0.9em; }
+        .card-body a { color: #3498db; text-decoration: none; word-break: break-all; }
+        .card-body a:hover { text-decoration: underline; }
+        .card-body p { margin: 0 0 10px 0; }
+        .screenshot { margin-top: 15px; }
+        .screenshot img { max-width: 100%; border-radius: 4px; border: 1px solid #ddd; cursor: pointer; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #95a5a6; }
+    </style>
+    </head><body>
+    <div class="container">
+        <h1>Relatório de Testes de URL</h1>
+        <div class="summary">
+            <div class="summary-item">
+                <h3>Data da Execução</h3>
+                <div class="value" style="font-size: 1.5em;">15/10/2025 13:59:36</div>
+            </div>
+            <div class="summary-item">
+                <h3>Total de URLs</h3>
+                <div class="value">76</div>
+            </div>
+            <div class="summary-item">
+                <h3>Sucessos</h3>
+                <div class="value success">66</div>
+            </div>
+            <div class="summary-item">
+                <h3>Falhas</h3>
+                <div class="value failure">10</div>
+            </div>
+            <div class="summary-item">
+                <h3>Duração</h3>
+                <div class="value" style="font-size: 1.5em;">378.14s</div>
+            </div>
+        </div>
+
+        <h2>Resultados Detalhados</h2>
+        <div class="results-grid">
+    
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Homcetas Api</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homcetas-api.oci.ibama.gov.br/login" target="_blank">https://homcetas-api.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 403</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Homgestaosispro Api</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homgestaosispro-api.oci.ibama.gov.br" target="_blank">https://homgestaosispro-api.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 403</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Homcetas Api</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homcetas-api.oci.ibama.gov.br/login" target="_blank">https://homcetas-api.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 403</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Homcorpgateway Api</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homcorpgateway-api.oci.ibama.gov.br" target="_blank">https://homcorpgateway-api.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 404</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Hom Api</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-api.boleto-ibama-siac.oci.ibama.gov.br/" target="_blank">https://hom-api.boleto-ibama-siac.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 404</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Hom Batch Ibama Siac</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-batch-ibama-siac.oci.ibama.gov.br/" target="_blank">https://hom-batch-ibama-siac.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 404</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Hom Api Adesao</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-api-adesao.oci.ibama.gov.br/" target="_blank">https://hom-api-adesao.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 403</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Serv Hom Ibama Agrobio</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://serv-hom-ibama-agrobio.oci.ibama.gov.br/" target="_blank">https://serv-hom-ibama-agrobio.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 415</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Hom Pucomex Ibama Paubrasil</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-pucomex-ibama-paubrasil.oci.ibama.gov.br" target="_blank">https://hom-pucomex-ibama-paubrasil.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 404</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header failure">
+                <h3 class="card-title">Hom Sisliv2</h3>
+                <span class="status-icon failure">✖</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sisliv2.ibama.gov.br" target="_blank">https://hom-sisliv2.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Message: unknown error: net::ERR_NAME_NOT_RESOLVED</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homcetas</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homcetas.oci.ibama.gov.br/login" target="_blank">https://homcetas.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homcetas.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homcetas.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homcetas.oci.ibama.gov.br_login.png" alt="Screenshot de https://homcetas.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsispro</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsispro.oci.ibama.gov.br" target="_blank">https://homsispro.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsispro.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsispro.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homsispro.oci.ibama.gov.br.png" alt="Screenshot de https://homsispro.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsispro Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsispro-api.oci.ibama.gov.br/" target="_blank">https://homsispro-api.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsispro-api.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsispro-api.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsispro-api.oci.ibama.gov.br_.png" alt="Screenshot de https://homsispro-api.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homgestaosispro</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homgestaosispro.oci.ibama.gov.br" target="_blank">https://homgestaosispro.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homgestaosispro.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homgestaosispro.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homgestaosispro.oci.ibama.gov.br.png" alt="Screenshot de https://homgestaosispro.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homgestaosispro</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homgestaosispro.oci.ibama.gov.br/login" target="_blank">https://homgestaosispro.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homgestaosispro.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homgestaosispro.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homgestaosispro.oci.ibama.gov.br_login.png" alt="Screenshot de https://homgestaosispro.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homgestaosispro</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homgestaosispro.oci.ibama.gov.br/login" target="_blank">https://homgestaosispro.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homgestaosispro.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homgestaosispro.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homgestaosispro.oci.ibama.gov.br_login.png" alt="Screenshot de https://homgestaosispro.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsca Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsca-api.oci.ibama.gov.br" target="_blank">https://homsca-api.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsca-api.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsca-api.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homsca-api.oci.ibama.gov.br.png" alt="Screenshot de https://homsca-api.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">H Sca2 Kibana Scaibama</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://h-sca2-kibana-scaibama.oci.ibama.gov.br" target="_blank">https://h-sca2-kibana-scaibama.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/h-sca2-kibana-scaibama.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/h-sca2-kibana-scaibama.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/h-sca2-kibana-scaibama.oci.ibama.gov.br.png" alt="Screenshot de https://h-sca2-kibana-scaibama.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">H Sisreg Api Scaibama</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://h-sisreg-api-scaibama.oci.ibama.gov.br/" target="_blank">https://h-sisreg-api-scaibama.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/h-sisreg-api-scaibama.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/h-sisreg-api-scaibama.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/h-sisreg-api-scaibama.oci.ibama.gov.br_.png" alt="Screenshot de https://h-sisreg-api-scaibama.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">H Dominio Ibama Scaibama</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://h-dominio-ibama-scaibama.oci.ibama.gov.br" target="_blank">https://h-dominio-ibama-scaibama.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/h-dominio-ibama-scaibama.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/h-dominio-ibama-scaibama.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/h-dominio-ibama-scaibama.oci.ibama.gov.br.png" alt="Screenshot de https://h-dominio-ibama-scaibama.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">H Apicorp Registry Scaibama</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://h-apicorp-registry-scaibama.oci.ibama.gov.br" target="_blank">https://h-apicorp-registry-scaibama.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/h-apicorp-registry-scaibama.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/h-apicorp-registry-scaibama.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/h-apicorp-registry-scaibama.oci.ibama.gov.br.png" alt="Screenshot de https://h-apicorp-registry-scaibama.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsca2</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsca2.oci.ibama.gov.br" target="_blank">https://homsca2.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsca2.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsca2.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homsca2.oci.ibama.gov.br.png" alt="Screenshot de https://homsca2.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homlogin</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homlogin.sso2.oci.ibama.gov.br" target="_blank">https://homlogin.sso2.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homlogin.sso2.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homlogin.sso2.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homlogin.sso2.oci.ibama.gov.br.png" alt="Screenshot de https://homlogin.sso2.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homlogin</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homlogin.sso2.oci.ibama.gov.br/" target="_blank">https://homlogin.sso2.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homlogin.sso2.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homlogin.sso2.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homlogin.sso2.oci.ibama.gov.br_.png" alt="Screenshot de https://homlogin.sso2.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homapisinaflor</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homapisinaflor.oci.ibama.gov.br" target="_blank">https://homapisinaflor.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homapisinaflor.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homapisinaflor.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homapisinaflor.oci.ibama.gov.br.png" alt="Screenshot de https://homapisinaflor.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Dof Sinaflor</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-dof-sinaflor.oci.ibama.gov.br/autenticidade/" target="_blank">https://hom-dof-sinaflor.oci.ibama.gov.br/autenticidade/</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 200</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsinaflor2</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsinaflor2.oci.ibama.gov.br/dof" target="_blank">https://homsinaflor2.oci.ibama.gov.br/dof</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsinaflor2.oci.ibama.gov.br_dof.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsinaflor2.oci.ibama.gov.br_dof.png" target="_blank">
+                        <img src="screenshots/homsinaflor2.oci.ibama.gov.br_dof.png" alt="Screenshot de https://homsinaflor2.oci.ibama.gov.br/dof" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsinaflor2</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsinaflor2.oci.ibama.gov.br/" target="_blank">https://homsinaflor2.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsinaflor2.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsinaflor2.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsinaflor2.oci.ibama.gov.br_.png" alt="Screenshot de https://homsinaflor2.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Confirma Cadastro</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-confirma-cadastro.ibama.gov.br" target="_blank">https://hom-confirma-cadastro.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-confirma-cadastro.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-confirma-cadastro.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-confirma-cadastro.ibama.gov.br.png" alt="Screenshot de https://hom-confirma-cadastro.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Gestaofauna Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-gestaofauna-int.ibama.gov.br" target="_blank">https://hom-gestaofauna-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-gestaofauna-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-gestaofauna-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-gestaofauna-int.ibama.gov.br.png" alt="Screenshot de https://hom-gestaofauna-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sisponto</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sisponto.ibama.gov.br" target="_blank">https://hom-sisponto.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sisponto.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sisponto.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sisponto.ibama.gov.br.png" alt="Screenshot de https://hom-sisponto.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Infoserv Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-infoserv-int.ibama.gov.br" target="_blank">https://hom-infoserv-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-infoserv-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-infoserv-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-infoserv-int.ibama.gov.br.png" alt="Screenshot de https://hom-infoserv-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Protocolo Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-protocolo-int.ibama.gov.br" target="_blank">https://hom-protocolo-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-protocolo-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-protocolo-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-protocolo-int.ibama.gov.br.png" alt="Screenshot de https://hom-protocolo-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Fauna Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-fauna-int.ibama.gov.br" target="_blank">https://hom-fauna-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-fauna-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-fauna-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-fauna-int.ibama.gov.br.png" alt="Screenshot de https://hom-fauna-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Adapropriedade Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-adapropriedade-int.ibama.gov.br" target="_blank">https://hom-adapropriedade-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-adapropriedade-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-adapropriedade-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-adapropriedade-int.ibama.gov.br.png" alt="Screenshot de https://hom-adapropriedade-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sistaxon Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sistaxon-int.ibama.gov.br" target="_blank">https://hom-sistaxon-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sistaxon-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sistaxon-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sistaxon-int.ibama.gov.br.png" alt="Screenshot de https://hom-sistaxon-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sislic Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sislic-int.ibama.gov.br" target="_blank">https://hom-sislic-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sislic-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sislic-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sislic-int.ibama.gov.br.png" alt="Screenshot de https://hom-sislic-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sisfauna Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sisfauna-int.ibama.gov.br" target="_blank">https://hom-sisfauna-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sisfauna-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sisfauna-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sisfauna-int.ibama.gov.br.png" alt="Screenshot de https://hom-sisfauna-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Cites Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-cites-int.ibama.gov.br" target="_blank">https://hom-cites-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-cites-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-cites-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-cites-int.ibama.gov.br.png" alt="Screenshot de https://hom-cites-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Agrotoxico Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-agrotoxico-int.ibama.gov.br" target="_blank">https://hom-agrotoxico-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-agrotoxico-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-agrotoxico-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-agrotoxico-int.ibama.gov.br.png" alt="Screenshot de https://hom-agrotoxico-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Fasis Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-fasis-int.ibama.gov.br" target="_blank">https://hom-fasis-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-fasis-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-fasis-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-fasis-int.ibama.gov.br.png" alt="Screenshot de https://hom-fasis-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Siger Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-siger-int.ibama.gov.br" target="_blank">https://hom-siger-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-siger-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-siger-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-siger-int.ibama.gov.br.png" alt="Screenshot de https://hom-siger-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sismat Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sismat-int.ibama.gov.br" target="_blank">https://hom-sismat-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sismat-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sismat-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sismat-int.ibama.gov.br.png" alt="Screenshot de https://hom-sismat-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Docibama</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-docibama.ibama.gov.br" target="_blank">https://hom-docibama.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-docibama.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-docibama.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-docibama.ibama.gov.br.png" alt="Screenshot de https://hom-docibama.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sicafi Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sicafi-int.ibama.gov.br" target="_blank">https://hom-sicafi-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sicafi-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sicafi-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sicafi-int.ibama.gov.br.png" alt="Screenshot de https://hom-sicafi-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Seguranca Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-seguranca-int.ibama.gov.br" target="_blank">https://hom-seguranca-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-seguranca-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-seguranca-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-seguranca-int.ibama.gov.br.png" alt="Screenshot de https://hom-seguranca-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Sistema Desconhecido</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="HTTPS://hom-sisret2-int.ibama.gov.br" target="_blank">HTTPS://hom-sisret2-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/HTTPS___hom-sisret2-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/HTTPS___hom-sisret2-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/HTTPS___hom-sisret2-int.ibama.gov.br.png" alt="Screenshot de HTTPS://hom-sisret2-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sca</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sca.ibama.gov.br" target="_blank">https://hom-sca.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sca.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sca.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sca.ibama.gov.br.png" alt="Screenshot de https://hom-sca.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sso</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sso.ibama.gov.br" target="_blank">https://hom-sso.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sso.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sso.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sso.ibama.gov.br.png" alt="Screenshot de https://hom-sso.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sso Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sso-int.ibama.gov.br" target="_blank">https://hom-sso-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sso-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sso-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sso-int.ibama.gov.br.png" alt="Screenshot de https://hom-sso-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsiger Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsiger-api.oci.ibama.gov.br/" target="_blank">https://homsiger-api.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsiger-api.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsiger-api.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsiger-api.oci.ibama.gov.br_.png" alt="Screenshot de https://homsiger-api.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsabia Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsabia-int.oci.ibama.gov.br/" target="_blank">https://homsabia-int.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsabia-int.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsabia-int.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsabia-int.oci.ibama.gov.br_.png" alt="Screenshot de https://homsabia-int.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsabia</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsabia.oci.ibama.gov.br/" target="_blank">https://homsabia.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsabia.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsabia.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsabia.oci.ibama.gov.br_.png" alt="Screenshot de https://homsabia.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homnucleoconciliacao Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homnucleoconciliacao-api.oci.ibama.gov.br/swagger-ui/index.html" target="_blank">https://homnucleoconciliacao-api.oci.ibama.gov.br/swagger-ui/index.html</a></p>
+                <p><strong>Tipo:</strong> API</p>
+                <p><strong>Detalhes:</strong> Status Code: 200</p>
+        </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homnucleoconciliacao</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homnucleoconciliacao.oci.ibama.gov.br/login" target="_blank">https://homnucleoconciliacao.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homnucleoconciliacao.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homnucleoconciliacao.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homnucleoconciliacao.oci.ibama.gov.br_login.png" alt="Screenshot de https://homnucleoconciliacao.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homaie Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homaie-api.oci.ibama.gov.br" target="_blank">https://homaie-api.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homaie-api.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homaie-api.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homaie-api.oci.ibama.gov.br.png" alt="Screenshot de https://homaie-api.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homaierelatoriofiscalizacao</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homaierelatoriofiscalizacao.oci.ibama.gov.br/login" target="_blank">https://homaierelatoriofiscalizacao.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homaierelatoriofiscalizacao.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homaierelatoriofiscalizacao.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homaierelatoriofiscalizacao.oci.ibama.gov.br_login.png" alt="Screenshot de https://homaierelatoriofiscalizacao.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homaiegestor</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homaiegestor.oci.ibama.gov.br/login" target="_blank">https://homaiegestor.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homaiegestor.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homaiegestor.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homaiegestor.oci.ibama.gov.br_login.png" alt="Screenshot de https://homaiegestor.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsiger Api</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsiger-api.oci.ibama.gov.br/" target="_blank">https://homsiger-api.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsiger-api.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsiger-api.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homsiger-api.oci.ibama.gov.br_.png" alt="Screenshot de https://homsiger-api.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homaiegestor</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homaiegestor.oci.ibama.gov.br/login" target="_blank">https://homaiegestor.oci.ibama.gov.br/login</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homaiegestor.oci.ibama.gov.br_login.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homaiegestor.oci.ibama.gov.br_login.png" target="_blank">
+                        <img src="screenshots/homaiegestor.oci.ibama.gov.br_login.png" alt="Screenshot de https://homaiegestor.oci.ibama.gov.br/login" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homlogin</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homlogin.sso2.oci.ibama.gov.br/" target="_blank">https://homlogin.sso2.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homlogin.sso2.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homlogin.sso2.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/homlogin.sso2.oci.ibama.gov.br_.png" alt="Screenshot de https://homlogin.sso2.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Ibama Agrobio</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-ibama-agrobio.oci.ibama.gov.br/" target="_blank">https://hom-ibama-agrobio.oci.ibama.gov.br/</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-ibama-agrobio.oci.ibama.gov.br_.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-ibama-agrobio.oci.ibama.gov.br_.png" target="_blank">
+                        <img src="screenshots/hom-ibama-agrobio.oci.ibama.gov.br_.png" alt="Screenshot de https://hom-ibama-agrobio.oci.ibama.gov.br/" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hommontreal</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hommontreal.oci.ibama.gov.br" target="_blank">https://hommontreal.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hommontreal.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hommontreal.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hommontreal.oci.ibama.gov.br.png" alt="Screenshot de https://hommontreal.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Internet Ibama Paubrasil</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-internet-ibama-paubrasil.oci.ibama.gov.br" target="_blank">https://hom-internet-ibama-paubrasil.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-internet-ibama-paubrasil.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-internet-ibama-paubrasil.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-internet-ibama-paubrasil.oci.ibama.gov.br.png" alt="Screenshot de https://hom-internet-ibama-paubrasil.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Ibama Paubrasil</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-ibama-paubrasil.oci.ibama.gov.br" target="_blank">https://hom-ibama-paubrasil.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-ibama-paubrasil.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-ibama-paubrasil.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-ibama-paubrasil.oci.ibama.gov.br.png" alt="Screenshot de https://hom-ibama-paubrasil.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsisfogo2</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsisfogo2.oci.ibama.gov.br" target="_blank">https://homsisfogo2.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsisfogo2.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsisfogo2.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homsisfogo2.oci.ibama.gov.br.png" alt="Screenshot de https://homsisfogo2.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">H Infoserv2</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://h-infoserv2.oci.ibama.gov.br" target="_blank">https://h-infoserv2.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/h-infoserv2.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/h-infoserv2.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/h-infoserv2.oci.ibama.gov.br.png" alt="Screenshot de https://h-infoserv2.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Homsiga</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://homsiga.oci.ibama.gov.br" target="_blank">https://homsiga.oci.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/homsiga.oci.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/homsiga.oci.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/homsiga.oci.ibama.gov.br.png" alt="Screenshot de https://homsiga.oci.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Sistema Desconhecido</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="HTTP://hom-sisliv-int.ibama.gov.br" target="_blank">HTTP://hom-sisliv-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/HTTP___hom-sisliv-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/HTTP___hom-sisliv-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/HTTP___hom-sisliv-int.ibama.gov.br.png" alt="Screenshot de HTTP://hom-sisliv-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Dof Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="http://hom-dof-int.ibama.gov.br" target="_blank">http://hom-dof-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-dof-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-dof-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-dof-int.ibama.gov.br.png" alt="Screenshot de http://hom-dof-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sna Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="http://hom-sna-int.ibama.gov.br" target="_blank">http://hom-sna-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sna-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sna-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sna-int.ibama.gov.br.png" alt="Screenshot de http://hom-sna-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sisquelonios Int</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sisquelonios-int.ibama.gov.br" target="_blank">https://hom-sisquelonios-int.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sisquelonios-int.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sisquelonios-int.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sisquelonios-int.ibama.gov.br.png" alt="Screenshot de https://hom-sisquelonios-int.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sinaflor</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sinaflor.ibama.gov.br" target="_blank">https://hom-sinaflor.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sinaflor.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sinaflor.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sinaflor.ibama.gov.br.png" alt="Screenshot de https://hom-sinaflor.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Servicos</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-servicos.ibama.gov.br" target="_blank">https://hom-servicos.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-servicos.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-servicos.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-servicos.ibama.gov.br.png" alt="Screenshot de https://hom-servicos.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Sna</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-sna.ibama.gov.br" target="_blank">https://hom-sna.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-sna.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-sna.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-sna.ibama.gov.br.png" alt="Screenshot de https://hom-sna.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        <div class="card">
+            <div class="card-header success">
+                <h3 class="card-title">Hom Dadosabertos</h3>
+                <span class="status-icon success">✔</span>
+            </div>
+            <div class="card-body">
+                <p><strong>URL:</strong> <a href="https://hom-dadosabertos.ibama.gov.br" target="_blank">https://hom-dadosabertos.ibama.gov.br</a></p>
+                <p><strong>Tipo:</strong> WEB</p>
+                <p><strong>Detalhes:</strong> Screenshot salvo em screenshots/hom-dadosabertos.ibama.gov.br.png</p>
+        
+                <div class="screenshot">
+                    <a href="screenshots/hom-dadosabertos.ibama.gov.br.png" target="_blank">
+                        <img src="screenshots/hom-dadosabertos.ibama.gov.br.png" alt="Screenshot de https://hom-dadosabertos.ibama.gov.br" loading="lazy">
+                    </a>
+                </div>
+            </div></div>
+        </div>
+        <div class="footer">
+            Relatório gerado automaticamente por URL Tester.
+        </div>
+    </div>
+    </body></html>
