@@ -28,29 +28,28 @@ Google Chrome instalado na sua máquina.
 
 Como Configurar o Ambiente
 Clone ou baixe os arquivos para uma pasta no seu computador.
+Para configurar o ambiente de forma rápida e fácil, siga os passos abaixo.
 
-Instale os pré-requisitos do sistema (para Debian/Ubuntu e derivados):
+1.  **Execute o script de configuração**:
+    Este comando irá criar um ambiente virtual e instalar todas as dependências necessárias.
+    ```bash
+    chmod +x setup.sh
+    ./setup.sh
+    ```
 
-sudo apt update
-sudo apt install python3-venv
+2.  **Ative o ambiente virtual**:
+    ```bash
+    source venv/bin/activate
+    ```
+    (No Windows, o comando é `venv\Scripts\activate`)
 
-Crie um ambiente virtual (recomendado):
-
-python3 -m venv venv
-
-Ative o ambiente:
-
-Windows: venv\Scripts\activate
-
-macOS/Linux: source venv/bin/activate
-
-Instale as bibliotecas Python necessárias:
-
-pip install -r requirements.txt
+3.  **Copie e edite o ficheiro de URLs**:
+    ```bash
+    cp urls.example.txt urls.txt
+    ```
+    Agora, abra o `urls.txt` e adicione as URLs que deseja testar.
 
 Como Usar
-Edite o arquivo urls.txt: Abra o arquivo em um editor de texto e adicione todas as URLs que você deseja testar. Coloque uma URL por linha.
-
 Execute o script: Abra o seu terminal ou prompt de comando, navegue até a pasta onde salvou os arquivos e execute o seguinte comando:
 
 python3 url_tester.py
@@ -76,15 +75,22 @@ Clique em "Save". O GitHub irá fornecer a URL do seu site (algo como https://se
 
 2. Fluxo de Trabalho para Atualização:
 
-Após cada execução do script localmente (`python3 url_tester.py`), novos resultados serão gerados. O arquivo `index.html` e a pasta `screenshots/` serão atualizados.
+Para facilitar a atualização do relatório, foi criado um script que automatiza todo o processo.
 
-Adicione e "commite" as alterações no Git:
+**Modo Automatizado (Recomendado):**
 
-git add index.html screenshots/
-git commit -m "Atualiza relatório de testes - $(date)"
+1.  **Dê permissão de execução ao script** (só precisa fazer isso uma vez):
+    ```bash
+    chmod +x update_report.sh
+    ```
+2.  **Execute o script de automação**:
+    ```bash
+    ./update_report.sh
+    ```
+Este único comando irá rodar os testes, gerar o relatório, fazer o commit e enviar para o GitHub.
 
-Envie as alterações para o GitHub:
+**Modo Manual:**
 
-git push
+Se preferir fazer passo a passo, siga os comandos abaixo: `python3 url_tester.py`, `git add index.html screenshots/`, `git commit -m "Atualiza relatório"` e `git push`.
 
 Após alguns instantes, o seu site no GitHub Pages será automaticamente atualizado com o novo relatório.

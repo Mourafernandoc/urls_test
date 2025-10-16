@@ -10,3 +10,6 @@ chrome_data*/
 
 # VSCode settings
 .vscode/
+
+# Ficheiro de URLs local (para não enviar URLs sensíveis para o repositório)
+urls.txt
